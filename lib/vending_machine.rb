@@ -24,6 +24,13 @@ attr_reader :inventory
     end
   end
 
+  def inventory_by_alphabet
+    inventory.group_by do |items|
+      items.name[0]
+    end
+  end
+
+
 
 
 end
