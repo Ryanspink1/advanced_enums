@@ -11,6 +11,14 @@ attr_reader :inventory
   def add_snack(snack)
     @inventory << snack
   end
+# binding.pry
+  def snacks_by_name
+    inventory.map do |items|
+      items.name
+    end
+  end
+
+
 
 
 end
