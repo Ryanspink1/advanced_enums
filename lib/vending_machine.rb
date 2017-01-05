@@ -18,6 +18,11 @@ attr_reader :inventory
     end
   end
 
+  def how_many_snacks
+    inventory.group_by do |items|
+      items.quantity
+    end
+  end
 
 
 
