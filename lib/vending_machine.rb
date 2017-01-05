@@ -2,7 +2,7 @@ require './lib/snack.rb'
 require 'pry'
 
 class VendingMachine
-attr_reader :inventory
+  attr_reader :inventory
 
   def initialize
     @inventory = []
@@ -30,7 +30,15 @@ attr_reader :inventory
     end
   end
 
-
-
-
+  def total_num_items
+    tick = 0
+    inventory.each do |item|
+      tick = tick + item.quantity
+    end
+    tick
+  end
 end
+  # end
+# binding.pry
+
+

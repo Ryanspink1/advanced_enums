@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/vending_machine'
+require './lib/snack'
 
 class VendingMachineTest < Minitest::Test
 
@@ -91,7 +92,7 @@ class VendingMachineTest < Minitest::Test
   end
 
   def test_total_number_of_items_in_vending_machine
-    skip
+    
     vm = VendingMachine.new
     snack1 = Snack.new("White Castle Burger", 1)
     snack2 = Snack.new("Snickers", 4)
